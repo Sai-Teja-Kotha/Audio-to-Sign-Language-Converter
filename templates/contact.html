@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.version, .contact-header {
+  color: #2980b9;
+  font-size: 24px;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 20px;
+}
+
+.contact-info {
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-info:last-child {
+  margin-bottom: 0;
+}
+
+.thank-you {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+</style>
+
+<div class="content-container">
+  <hr class="divider">
+  <h2 class="contact-header">CONTACT US</h2>
+  <p class="contact-info">For any queries regarding this website, contact us at the following:</p>
+  <p class="contact-info">Our Email ID: gharsh1810@gmail.com</p>
+  <p class="contact-info">Twitter handle: @SaiTeja_K_</p>
+  <p class="contact-info">Contact number: 6303296462</p>
+  <hr class="divider">
+  <p class="thank-you">Thank you for visiting our website!</p>
+</div>
+
+{% endblock %}

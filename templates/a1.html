@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAMVAADA SETU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #223355; /* Dark blue shade */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff; /* White text color */
+        }
+
+        .title {
+            text-align: center;
+            font-size: 48px; /* Adjusted font size */
+            font-weight: 700;
+            margin-top: 20px;
+            color: #14f2c2; /* Light blue shade */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 20px auto; /* Added margin */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Added background color with opacity */
+            border-radius: 10px; /* Added border radius */
+        }
+
+        .image-container {
+            width: 48%; /* Adjusted width */
+            text-align: center; /* Center align the content */
+        }
+
+        .image-container img {
+            width: 80%; /* Adjusted image width */
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px; /* Added border radius */
+        }
+
+        .text-container {
+            width: 48%; /* Adjusted width */
+        }
+
+        .text-container h1 {
+            font-size: 24px; /* Adjusted font size */
+            margin-bottom: 20px;
+            text-align: left; 
+            color: #14f2c2; /* Light blue shade */
+        }
+
+        .text-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify; /* Justified text */
+        }
+
+        .slider-heading {
+            text-align: center; /* Center align the heading */
+            font-size: 24px; /* Adjusted font size */
+            margin-top: 20px; /* Added margin */
+            color: #14f2c2; /* Light blue shade */
+        }
+
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Increased margin between slider containers */
+        }
+
+        .slider-container > div {
+            text-align: center; /* Center align the content */
+            margin: 0 20px; /* Increased margin between images */
+        }
+
+        .slider-container img {
+            width: 200px; /* Adjusted image width */
+            border-radius: 10px; /* Added border radius */
+        }
+
+        .sign-name {
+            font-size: 14px; /* Adjusted font size */
+            color: #fff; /* White text color */
+            text-align: center; /* Center align the text */
+            margin-top: 5px; /* Added margin */
+        }
+        .li {
+  display: inline-block;
+  float: none;
+}
+
+.li a {
+  display: block;
+  color: #ffffff; 
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+        #nav {
+  margin: 0;
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #34495e; 
+  text-align: center;
+} 
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .image-container,
+            .text-container {
+                width: 100%; 
+                max-width: 100%; 
+            }
+            .slider-container {
+                flex-wrap: wrap; 
+            }
+            .slider-container > div {
+                margin: 20px; 
+            }
+            .slider-container img {
+                width: 200px; 
+                margin-bottom: 20px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">SAMVAADA SETU</div>
+    <ul id="nav">
+        <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
+        <li class="li"><a href="{% url 'animation' %}">Sign-Language Converter</a></li>
+        {% if not user.is_authenticated %}
+        <li class="li"><a href="{% url 'signup' %}">Register/Sign Up</a></li>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <li class="li"><a href="{% url 'logout' %}">Log-Out</a></li>
+        {% else %}
+          <li class="li"><a href="{% url 'login' %}">Log-in</a></li>
+        {% endif %}
+        <li class="li"><a href="{% url 'contact' %}">Contact</a></li>
+        <li class="li"><a href="{% url 'about' %}">About</a></li>
+      </ul>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://img.huffingtonpost.com/asset/5b9e0b7e3c00004c000a616a.jpeg?ops=scalefit_720_noupscale" alt="Sign Language">
+        </div>
+        <div class="text-container">
+          <h1>Explanation of Samvaada Setu</h1>
+          <p><strong>Samvaada:</strong> In Hindi, "Samvaada" (संवाद) translates to "dialogue" or "conversation." It denotes an exchange of ideas, opinions, or information between two or more parties.</p>
+          <p><strong>Setu:</strong> "Setu" (सेतु) translates to "bridge" in Hindi. It can refer to a physical structure that connects two places separated by a geographical obstacle like a river or a metaphorical bridge that connects people, ideas, or cultures.</p>
+          <p>Together, "<strong>Samvaada Setu</strong>" can be interpreted as "Dialogue Bridge" or "Bridge of Communication." It implies the facilitation of communication, understanding, and exchange of information between different parties or communities. In the context of the project or initiative named "Samvaada Setu," it likely signifies a platform or system aimed at fostering dialogue, interaction, or communication, potentially focusing on bridging gaps between different linguistic, cultural, or social groups.</p>
+      </div>
+    </div>
+    <div class="slider-heading">Commonly Used Sign Language</div>
+    <div class="slider-container">
+        <div>
+            <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/please.gif" alt="Letter A">
+        </div>
+        <div>
+            <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/Sleep.gif" alt="Letter B">
+        </div>
+        <div>
+            <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/thank-you.gif" alt="Letter B">
+        </div>
+        <div>
+          <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/more-2.gif" alt="Letter B">
+      </div>
+         </div>
+    <div class="slider-container">
+      <div>
+        <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/want-2.gif" alt="Letter B">
+    </div>
+      <div>
+          <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/mom.gif" alt="Letter A">
+      </div>
+      <div>
+          <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/dad.gif" alt="Letter B">
+      </div>
+      <div>
+          <img src="https://tinyhood-assets.s3.amazonaws.com/publicassets/eat-2.gif" alt="Letter B">
+      </div>
+       </div>
+</body>
+
+</html>

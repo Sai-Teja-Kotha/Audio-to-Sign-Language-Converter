@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Language Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/028/242/417/non_2x/international-day-of-sign-languages-a-pair-of-deaf-and-mute-people-using-sign-language-to-communicate-a-man-and-a-woman-with-hearing-impairment-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #3d5af1; 
+        }
+
+        #proceed-btn {
+            background-color: #5372F0;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #proceed-btn:hover {
+            background-color: #4461B0;
+        }
+
+        .deaf-communication {
+            display: block;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .deaf-communication h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #3d5af1; 
+        }
+
+        .deaf-communication p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #3d5af1; 
+        }
+        .button {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>SAMVAADA SETU</h1>
+        <h2>(Bridge of Dialogue)</h2>
+        <a class="button" href="{% url 'index1' %}">Proceed</a>
+    </div>
+    
+</body>
+
+</html>

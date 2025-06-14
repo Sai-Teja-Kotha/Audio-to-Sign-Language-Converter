@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.version, .developers-header {
+  color: #2980b9;
+  font-size: 24px;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.developers-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.developers-list li {
+  color: #333;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.thank-you {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+</style>
+
+<div class="content-container">
+  <hr class="divider">
+  <div class="intro">
+    <p>We are just a bunch of enthusiastic people who want to help the society.</p>
+  </div>
+  <hr class="divider">
+  <h2 class="developers-header">Developed By:</h2>
+  <hr class="divider">
+  <ul class="developers-list">
+    <li>PRADEEP NAIK</li>
+    <li>KANDRA MANEESH</li>
+    <li>HARSHAVARDHAN</li>
+    <li>SAI TEJA</li>
+  </ul>
+  <hr class="divider">
+  <p class="thank-you">Thank you for visiting our website!</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAMVAADA SETU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #223355; /* Dark blue shade */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #140101; /* White text color */
+        }
+
+        .title {
+            text-align: center;
+            font-size: 72px; /* Larger font size */
+            font-weight: 700;
+            margin-top: 20px;
+            color: #14f2c2; /* Light blue shade */
+            font-family: 'Arial', sans-serif; /* Example of changing font */
+        }
+
+        .form-container {
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .form-container h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #5372F0; /* Light blue shade */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+            width: 100%;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #3d5af1; /* Darker blue shade on hover */
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container p a {
+            color: #21e80f; /* Green shade */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">SAMVAADA SETU</div>
+    <div class="form-style">
+        <h1>Log in</h1>
+        <form class="site-form" action="." method="post">
+            {% csrf_token %}
+            {{ form }}
+            {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+            {% endif %}
+            <input class="submit" type="submit" value="Log in">
+        </form>
+        <p>Don't have an account? <a href="./sign-up.html">Sign Up</a></p>
+    </div>
+</body>
+
+</html>

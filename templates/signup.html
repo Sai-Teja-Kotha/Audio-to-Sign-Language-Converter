@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#nav {
+  margin: 0;
+  list-style-type: none;
+  margin-top:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(61, 2, 61);
+}
+h2
+{
+  color: rgb(61, 2, 61);
+}
+
+.li {
+  float: left;
+}
+
+.li a {
+  display: block;
+  color:whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  margin:10px;
+  border-radius: 50px;
+  background-color:whitesmoke;
+  color: rgb(61, 2, 61);
+  font-weight: bold;
+}
+.form-style button{
+
+  width: 89%;
+	height:70%;
+	padding: 5%;
+	background: rgb(61, 2, 61);
+	border-bottom: 2px solid whitesmoke;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: whitesmoke;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Times New Roman";
+}
+.form-style button:hover {
+  background-color: whitesmoke;
+  color: rgb(61, 2, 61);
+  font-weight: bold;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+.left {
+  left: 15;
+  border-right: 0px rgb(61, 2, 61) solid;
+}
+
+.right {
+  right: 0;
+  border-left: 1px rgb(61, 2, 61) solid;
+}
+
+.mytext {
+    border:3px solid rgb(61, 2, 61);
+    border-radius: 15px;
+    padding:4px;
+    margin:0px;
+    float:left;
+    height:32px;
+    overflow:hidden;
+    line-height:16px;
+    width: 300px;
+    margin-left: 54px;
+    margin-right: 20px
+  }
+
+  .mic {
+    border-radius: 15px;
+      border:3px solid rgb(61, 2, 61);
+      background:white;
+      vertical-align:top;
+      padding:4px;
+      margin:0;
+      float:left;
+      height:38px;
+      overflow:hidden;
+      width:3em;
+      text-align:center;
+      line-height:16px;
+  }
+  
+
+.submit {
+    border:1px solid whitesmoke;
+    height: 42px;
+    width: 160px;
+    text-align: center;
+    background-color: rgb(61, 2, 61);
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Times New Roman";
+    vertical-align:top;
+    border-radius: 25px;
+}
+.submit:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(61, 2, 61);
+  background-color: whitesmoke;
+  color: rgb(61, 2, 61);
+  font-weight: bold;
+}
+.td {
+  color: rgb(61, 2, 61);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body
+{
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke
+}
+
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+
+}
+.form-style h1, .form-style a{
+	padding: 20px 0;
+  font-size: 24px;
+	font-weight: bold;
+  font-family: "Times New Roman";
+	text-align: center;
+	margin: -16px -16px 16px -16px;
+  color:rgb(61, 2, 61)
+}
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select
+{
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color:#0000a0 ;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="password"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+	box-shadow: 0 0 5px #7505bb;
+	padding: 3%;
+	border: 1px solid #7505bb;
+}
+
+.site-form span,label{
+  color: rgb(61, 2, 61);
+}
+.errorlist{
+    color: red;
+    font-weight: bold;
+}
+</style>
+<title>Homepage</title>
+</head>
+<div style="background-color:rgb(30, 1, 30);color:aliceblue;padding:10 10 1 10;border: 1px rgb(61, 2, 61) groove;margin-bottom:0;">
+
+<h1 align=center>Samvaada-Setu</h1>
+</div>
+<body>
+<div class="wrapper" >
+<div class="form-style">
+	<h1>Sign Up</h1>
+	<form class="site-form" action="." method="post">
+		{% csrf_token %}
+		{{ form }}
+		<br><br>
+		<input class="submit" type="submit" value="Sign Up">
+
+	</form>
+</div>
+</div>
+<script type="text/javascript">
+	document.getElementsByTagName("span")[0].innerHTML="";
+	document.getElementsByTagName("span")[1].innerHTML="";
+</script>
+</body>
+</html>
+

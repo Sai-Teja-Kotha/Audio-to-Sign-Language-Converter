@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAMVAADA SETU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #223355; 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff; 
+        }
+        .title {
+            text-align: center;
+            font-size: 48px; 
+            font-weight: 700;
+            margin-top: 20px;
+            color: #14f2c2; 
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 20px auto; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px; 
+        }
+
+        .image-container {
+            width: 48%; 
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px; 
+        }
+
+        .text-container {
+            width: 48%; 
+        }
+
+        .text-container h1 {
+            font-size: 24px; 
+            margin-bottom: 20px;
+            text-align: left; 
+            color: #14f2c2; 
+        }
+
+        .text-container p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify; 
+        }
+
+        .action-container {
+            text-align: center; 
+            margin-top: 20px;
+        }
+
+        .action-container .action a {
+            background-color: #5372F0; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+            margin: 0 10px; 
+            text-decoration: none;
+        }
+
+        .action-container .action a:hover {
+            background-color: #3d5af1; 
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center; 
+            }
+            .image-container,
+            .text-container {
+                width: 100%; 
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">SAMVAADA SETU</div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://img.huffingtonpost.com/asset/5b9e0b7e3c00004c000a616a.jpeg?ops=scalefit_720_noupscale" alt="Sign Language">
+        </div>
+        <div class="text-container">
+            <h1>Welcome to Sign Language Translator</h1>
+            <p>The project “Samvaada Setu" aims to create a real-time NLP system converting spoken language into sign language for the hearing impaired. It will use advanced ML algorithms and deep learning to accurately translate spoken words into sign language gestures. The system will consider regional variations, dialects, and user preferences, prioritizing accuracy, speed, and efficiency for seamless communication. This project seeks to enhance accessibility and inclusivity for the deaf community through innovative NLP technology.</p>
+        </div>
+    </div>
+    <div class="action-container">
+        <div class="action">
+            <a href="{% url 'login' %}">Log In</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+        </div>
+    </div>
+</body>
+
+</html>
